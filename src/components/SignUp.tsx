@@ -1,10 +1,10 @@
 import { Button } from "./Button";
 
-interface SignUpProps {
+export type SignUpProps = {
   fullName: string;
   email: string;
   password: string;
-}
+};
 
 export const SignUp = ({ fullName, email, password }: SignUpProps) => {
   return (

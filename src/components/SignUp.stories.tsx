@@ -1,5 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { SignUp } from "./SignUp";
+import { Meta } from "@storybook/react";
+import { SignUp, SignUpProps } from "./SignUp";
+
+type StoryObj<T> = { (args: T): JSX.Element };
 
 const signUpMeta: Meta<typeof SignUp> = {
   component: SignUp,
@@ -21,10 +23,8 @@ const signUpMeta: Meta<typeof SignUp> = {
 
 export default signUpMeta;
 
-// @ts-ignore
-const Template: StoryObj<typeof SignUp> = (args) => <SignUp {...args} />;
+const Template: StoryObj<SignUpProps> = (args) => <SignUp {...args} />;
 
-// @ts-ignore
 export const Base = Template.bind({});
 Base.args = {
   fullName: "",

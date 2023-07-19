@@ -47,7 +47,7 @@ export const LargePrimary: ButtonStory = {
   },
 };
 
-export const secondary: ButtonStory = {
+export const Secondary: ButtonStory = {
   args: {
     children: "Button",
     color: "secondary",
@@ -55,7 +55,7 @@ export const secondary: ButtonStory = {
   },
 };
 
-export const danger: ButtonStory = {
+export const Danger: ButtonStory = {
   args: {
     children: "Button",
     color: "danger",

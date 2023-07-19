@@ -1,9 +1,9 @@
 import { Button } from "./Button";
 
-interface LoginProps {
+export type LoginProps = {
   email: string;
   password: string;
-}
+};
 
 export const Login = ({ email, password }: LoginProps) => {
   return (

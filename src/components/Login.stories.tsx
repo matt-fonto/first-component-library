@@ -1,10 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Login } from "./Login";
+import { Meta } from "@storybook/react";
+import { Login, LoginProps } from "./Login";
+
+type StoryObj<T> = { (args: T): JSX.Element };
 
 const loginMeta: Meta<typeof Login> = {
   component: Login,
   title: "Login",
-  //  add docs
   tags: ["autodocs"],
   argTypes: {
     email: {
@@ -18,10 +19,8 @@ const loginMeta: Meta<typeof Login> = {
 
 export default loginMeta;
 
-// @ts-ignore
-const Template: StoryObj<typeof Login> = (args) => <Login {...args} />;
+const Template: StoryObj<LoginProps> = (args) => <Login {...args} />;
 
-// @ts-ignore
 export const Base = Template.bind({});
 Base.args = {
   email: "",

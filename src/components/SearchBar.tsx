@@ -32,7 +32,7 @@ export const SearchBar = ({ query, onChange }: SearchBarProps) => {
           onChange={(e) => onChange?.(e.target.value)}
         />
 
-        <Button size="small" color="primary" onClick={() => {}}>
+        <Button size="small" color="primary">
           Search
         </Button>
       </div>
