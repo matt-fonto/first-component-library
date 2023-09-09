@@ -1,10 +1,9 @@
-import { SearchBar } from "./SearchBar";
 import { StoryObj, Meta } from "@storybook/react";
+import SearchBar from "./Component";
 
 const searchBarMeta: Meta<typeof SearchBar> = {
   component: SearchBar,
   title: "SearchBar",
-  //  add docs
   tags: ["autodocs"],
   argTypes: {
     query: {

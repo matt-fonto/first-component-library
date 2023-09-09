@@ -1,11 +1,7 @@
-import { Button } from "./Button";
+import Button from "../Button";
+import { LoginProps } from "./types";
 
-export type LoginProps = {
-  email: string;
-  password: string;
-};
-
-export const Login = ({ email, password }: LoginProps) => {
+const Login = ({ email, password }: LoginProps) => {
   return (
     <form className="bg-white p-6 rounded-lg shadow-md max-w-sm">
       <div className="mb-4">
@@ -34,3 +30,5 @@ export const Login = ({ email, password }: LoginProps) => {
     </form>
   );
 };
+
+export default Login;

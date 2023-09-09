@@ -1,11 +1,7 @@
-import { Button } from "./Button";
+import Button from "../Button";
+import { SearchBarProps } from "./types";
 
-interface SearchBarProps {
-  query?: string;
-  onChange?: (query: string) => void;
-}
-
-export const SearchBar = ({ query, onChange }: SearchBarProps) => {
+const SearchBar = ({ query, onChange }: SearchBarProps) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md max-w-md">
       <div className="relative flex items-center">
@@ -39,3 +35,5 @@ export const SearchBar = ({ query, onChange }: SearchBarProps) => {
     </div>
   );
 };
+
+export default SearchBar;

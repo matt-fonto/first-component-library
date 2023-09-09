@@ -1,12 +1,7 @@
-import { Button } from "./Button";
+import Button from "../Button";
+import { SignUpProps } from "./types";
 
-export type SignUpProps = {
-  fullName: string;
-  email: string;
-  password: string;
-};
-
-export const SignUp = ({ fullName, email, password }: SignUpProps) => {
+const SignUp = ({ fullName, email, password }: SignUpProps) => {
   return (
     <form className="bg-white px-8 pt-6 pb-8 mb-4 rounded shadow-md max-w-sm">
       <div className="mb-4">
@@ -59,3 +54,5 @@ export const SignUp = ({ fullName, email, password }: SignUpProps) => {
     </form>
   );
 };
+
+export default SignUp;

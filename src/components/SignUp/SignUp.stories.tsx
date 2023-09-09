@@ -1,7 +1,8 @@
 import { Meta } from "@storybook/react";
-import { SignUp, SignUpProps } from "./SignUp";
+import SignUp from "./Component";
+import { SignUpProps } from "./types";
 
-type StoryObj<T> = { (args: T): JSX.Element };
+type StoryObj<T> = { (args: T): JSX.Element; args?: T };
 
 const signUpMeta: Meta<typeof SignUp> = {
   component: SignUp,

@@ -1,15 +1,7 @@
-import { Button } from "./Button";
+import Button from "../Button";
+import { CardProps } from "./types";
 
-interface CardProps {
-  imageUrl: string;
-  date: string;
-  readTime: string;
-  title: string;
-  description: string;
-  buttonText: string;
-}
-
-export const Card = ({
+const Card = ({
   imageUrl,
   date,
   readTime,
@@ -36,7 +28,7 @@ export const Card = ({
       <h2 className="text-lg font-semibold">{title}</h2>
 
       <p className="text-sm text-gray-600">
-        {description.length > 50
+        {description && description.length > 50
           ? description.substring(0, 50) + "..."
           : description}
       </p>
@@ -49,3 +41,5 @@ export const Card = ({
     </div>
   );
 };
+
+export default Card;
